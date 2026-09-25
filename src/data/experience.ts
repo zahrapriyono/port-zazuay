@@ -1,0 +1,171 @@
+import { Experience } from '../types';
+
+export const experiences: Experience[] = [
+  {
+    id: 'himti-publication-marketing',
+    title: 'Activist → Manager, Publication and Marketing',
+    organization: 'HIMTI BINUS',
+    description:
+      'Progressed from content-producing Activist to Manager of the Publication and Marketing division in Semarang, leading a 20-person team and cross-region (Jakarta/Semarang) publication strategy.',
+    bullets: [
+      'Lead content and publication strategy for a team of 20 activists, reporting to the division General Manager',
+      'Personally design promotional material and provide live-reporting coverage for Jakarta-based HIMTI events (incl. a company visit to Apple Developer Academy Tangerang, and the 2026 Digital Privacy webinar)',
+      "Manage HIMTI Semarang's official Instagram account, growing monthly views from 1.8K to 19K and non-follower reach to 92% of views (Feb–Aug 2026)",
+    ],
+    startDate: '2025-02',
+    endDate: 'Present',
+    type: 'organizational',
+  },
+  {
+    id: 'sesvent-2025',
+    title: 'Event Leader, Region Semarang',
+    organization: 'HIMTI BINUS — SESVENT 2025',
+    description:
+      "Led the event committee for HIMTI's activist-selection program in Semarang.",
+    bullets: [
+      'Supervised planning, scheduling, and assessment coordination for new members',
+      'Led a 20+ person committee coordinating assessments for 60+ prospective new members',
+    ],
+    startDate: '2025-09',
+    endDate: '2025-10',
+    type: 'organizational',
+  },
+  {
+    id: 'first-year-program-freshmen',
+    title: 'Freshmen Leader & Freshmen Partner',
+    organization: 'First Year Program, BINUS University',
+    description:
+      'Mentored incoming Computer Science students — first as an orientation-focused Leader, then as an ongoing 1:1 Partner through their first year.',
+    bullets: [
+      'Mentored and facilitated a class of 40+ freshmen as a Speaker for their orientation',
+      'Facilitated 20 weekly developmental sessions on critical soft skills, including time management and study guides',
+      'Supervised and mentored a group of 6 freshmen in a community-driven mangrove tree-planting movement at Tambak Lorok, Semarang',
+    ],
+    startDate: '2025-07',
+    endDate: '2026-06',
+    type: 'volunteer',
+  },
+  {
+    id: 'codeavour-ceremony-coordinator',
+    title: 'Ceremony Coordinator Volunteer',
+    organization:
+      'Codeavour (International AI, Coding & Robotics Competition, Ages 7–18)',
+    description:
+      'Served as volunteer PIC for opening and closing ceremonies at the Indonesia leg of Codeavour, an international AI/coding/robotics competition run across 60+ countries.',
+    bullets: [
+      "Coordinated the opening and closing ceremonies for the competition's Indonesia leg",
+      'Coordinated between local (Indonesia) volunteers and the Codeavour India-based organizing team',
+    ],
+    startDate: '2026-05',
+    endDate: '2026-05',
+    type: 'volunteer',
+  },
+  {
+    id: 'feast-2025-secretary',
+    title: 'Secretary',
+    organization: 'FEAST 2025, HIMTI Semarang',
+    description:
+      'Managed administrative operations for FEAST, a bonding and Ramadhan iftar event for HIMTI Semarang.',
+    bullets: [
+      'Recorded meetings, organized schedules, and supported committee documentation',
+      'Part of a 14-person committee running an event for 40 participants',
+    ],
+    startDate: '2025-03',
+    endDate: '2025-03',
+    type: 'organizational',
+  },
+  {
+    id: 'pura-smart-technology-visit',
+    title: 'Event Coordinator, Company Visit',
+    organization: 'Pura Smart Technology (HIMTI Semarang)',
+    description:
+      "Coordinated and led planning for an industrial visit to Pura Smart Technology, owning the event's rundown and logistics end-to-end.",
+    bullets: [
+      'Organized the industrial visit and coordinated with company representatives',
+      'Led the making of the event (rundown, etc.); handled logistics and participant documentation',
+      'Part of a 4-person team running the visit for 30+ participants',
+    ],
+    startDate: '2025-05',
+    endDate: '2025-06',
+    type: 'organizational',
+  },
+  {
+    id: 'bifest-2025-character-building',
+    title: 'Event Leader, Character Building Festival',
+    organization: 'BIFEST 2025, BINUS Semarang',
+    description:
+      'Directed a cross-faculty Character Building Festival, leading a 13-person team to coordinate activities for 90+ participants across three faculties.',
+    bullets: [
+      'Directed the festival across faculty lines (Information Systems, DKV, and Computer Science)',
+      'Oversaw team coordination, activity planning, and event logistics for a 13-person team',
+    ],
+    startDate: '2025-05',
+    endDate: '2025-05',
+    type: 'organizational',
+  },
+  {
+    id: 'techfest-event-division',
+    title: 'Event Division',
+    organization: 'TECHFEST',
+    description:
+      'Contributed to national-scale competition operations for TECHFEST, collaboratively building the event rundown for the competition final.',
+    bullets: [
+      'Supported event operations for a competition featuring Data Analytics and UI/UX Design tracks',
+      'Collaboratively built the rundown for the competition final',
+      'Worked with technical and creative teams to maintain event quality',
+    ],
+    startDate: '2025-04',
+    endDate: '2025-06',
+    type: 'organizational',
+  },
+  {
+    id: 'techno-himti-semarang',
+    title: 'Event Coordinator',
+    organization: 'TECHNO HIMTI Semarang',
+    description:
+      'Coordinated a welcoming event for 80+ incoming Computer Science students, informally extending coordination across all divisions beyond the formal Event Staff scope.',
+    bullets: [
+      'Coordinated a welcoming party for new Computer Science students, managing event flow, logistics, and technical support',
+      'Coordinated across all divisions, beyond the formal Event Staff role',
+      'Part of a 44-person general team (8 Semarang-specific) running the event for 80+ participants',
+    ],
+    startDate: '2025-06',
+    endDate: '2025-09',
+    type: 'organizational',
+  },
+  {
+    id: 'hilet-2025-committee',
+    title: 'Committee — Event ↔ Mentor Division Liaison',
+    organization: 'HILET 2025, HIMTI',
+    description:
+      'Served on the planning committee for HILET 2025 ("HIMTI Leadership Training 2025: Interstellar Leadership Mission"), coordinating between the Event Division and Mentor Division through the planning cycle.',
+    bullets: [
+      'Coordinated between Event Division and Mentor Division during event planning',
+      'Event ran as a hybrid single-day program on Dec 14, 2025 (onsite Greater Jakarta; online Bandung/Semarang/Medan)',
+    ],
+    startDate: '2025-11',
+    endDate: '2025-12',
+    type: 'organizational',
+  },
+  {
+    id: 'ldkcp-2026-event-staff',
+    title: 'Event Staff (Structural Utilities)',
+    organization: 'LDKCP 2026, HIMTI',
+    description:
+      'Built structural event utilities for LDKCP 2026 ("Enter the Game, Lead the Journey"), HIMTI\'s leadership training program for incoming board members.',
+    bullets: [
+      "Created structural event utilities used during the event's execution",
+      'Event ran hybrid, June 1–13, 2026, reaching 110 participants (102 onsite Greater Jakarta, 8 online Medan)',
+      'Part of a 9-person team',
+    ],
+    startDate: '2026-03',
+    endDate: '2026-04',
+    type: 'organizational',
+  },
+
+  // ← add more experiences
+];
+
+// Helper: get experiences by type
+export const getExperiencesByType = (type: Experience['type']): Experience[] =>
+  experiences.filter((exp) => exp.type === type);
