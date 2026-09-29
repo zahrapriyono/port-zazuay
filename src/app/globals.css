@@ -1,0 +1,219 @@
+@import 'tailwindcss';
+
+@theme {
+  /* Fonts */
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-display: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), monospace;
+
+  /* Custom animations */
+  --animate-windblown-1: windblown-1 6s ease-in-out infinite;
+  --animate-windblown-2: windblown-2 8s ease-in-out infinite;
+  --animate-bounce-slow: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Tailwind v4 ignores tailwind.config.ts unless it is loaded with @config, so the
+   colour tokens are mapped here. This is what makes text-primary, bg-background,
+   text-muted-foreground, border-border, etc. resolve to the CSS variables below. */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-surface: var(--surface);
+  --color-paper: var(--paper);
+  --color-paper-foreground: var(--paper-foreground);
+  --color-paper-muted: var(--paper-muted);
+  --color-frame: var(--frame);
+  --color-handle: var(--handle);
+  --color-dot-soft: var(--dot-soft);
+  --color-highlight: var(--highlight);
+  --color-highlight-foreground: var(--highlight-foreground);
+  --color-bubble: var(--bubble);
+  --color-bubble-foreground: var(--bubble-foreground);
+}
+
+/* next-themes toggles a .dark class, so tell Tailwind's dark: variant to use it */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    /* Light mode (matches the design) */
+    --background: #ffffff;
+    --foreground: #1a1a1a;
+    --muted: #f5f5f5;
+    --muted-foreground: #6b7280;
+    --card: #ffffff;
+    --card-foreground: #1a1a1a;
+    --border: #e5e7eb;
+    --primary: #540c0d; /* Maroon */
+    --primary-foreground: #ffffff;
+    --secondary: #f3f4f6;
+    --secondary-foreground: #374151;
+    --accent: #f2b8d2;
+    --splash-dot: #540c0d;
+
+    /* Design-specific surfaces */
+    --surface: #f5f5f5; /* light-grey section bands */
+    --paper: #f1f0eb; /* polaroid / paper cards */
+    --paper-foreground: #141414;
+    --paper-muted: #525252;
+    --frame: #171717; /* selection-frame border */
+    --handle: #ffffff; /* selection-frame handles */
+    --dot-soft: #f2b8d2; /* pink decorative dots */
+    --highlight: #d3e4fa; /* "selected text" highlight */
+    --highlight-foreground: #4a1c2e;
+    --bubble: #ffffff; /* context-menu bubble */
+    --bubble-foreground: #111111;
+  }
+
+  .dark {
+    /* Dark mode: warm near-black, soft pink accent taken from the design */
+    --background: #120b0c;
+    --foreground: #efe7e7;
+    --muted: #1c1314;
+    --muted-foreground: #a89c9e;
+    --card: #1a1112;
+    --card-foreground: #efe7e7;
+    --border: #3a2a2c;
+    --primary: #f2b8d2;
+    --primary-foreground: #2a0a10;
+    --secondary: #221718;
+    --secondary-foreground: #d9cccf;
+    --accent: #f2b8d2;
+    --splash-dot: #7d1f27;
+
+    --surface: #1a1213;
+    --paper: #251a1c;
+    --paper-foreground: #f3ecec;
+    --paper-muted: #b5a7aa;
+    --frame: #e8dede;
+    --handle: #120b0c;
+    --dot-soft: #4a2233;
+    --highlight: #1f3452;
+    --highlight-foreground: #f3dfe8;
+    --bubble: #2a2022;
+    --bubble-foreground: #f3ecec;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition:
+      background-color 0.3s,
+      color 0.3s;
+  }
+}
+
+@layer components {
+  /* Reusable section wrapper */
+  .section-container {
+    @apply mx-auto max-w-6xl px-4 py-16 sm:px-6 lg:px-8;
+  }
+
+  /* Pink accent text */
+  .text-accent {
+    color: var(--primary);
+  }
+
+  /* Card style */
+  .card {
+    @apply rounded-xl border p-6 transition-all duration-300;
+    background-color: var(--card);
+    border-color: var(--border);
+  }
+
+  .card:hover {
+    @apply -translate-y-1 shadow-lg;
+  }
+}
+
+/* Typewriter cursor blink */
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.typewriter-cursor {
+  animation: blink 0.7s infinite;
+}
+
+/* Windblown */
+@keyframes windblown-1 {
+  0%,
+  100% {
+    transform: rotate(-3deg) translateY(0px);
+  }
+  25% {
+    transform: rotate(-1deg) translateY(-6px);
+  }
+  50% {
+    transform: rotate(2deg) translateY(-3px);
+  }
+  75% {
+    transform: rotate(0deg) translateY(-8px);
+  }
+}
+@keyframes windblown-2 {
+  0%,
+  100% {
+    transform: rotate(2deg) translateY(0px);
+  }
+  33% {
+    transform: rotate(-2deg) translateY(-5px);
+  }
+  66% {
+    transform: rotate(3deg) translateY(-10px);
+  }
+}
+
+.animate-windblown-1 {
+  animation: windblown-1 6s ease-in-out infinite;
+}
+
+.animate-windblown-2 {
+  animation: windblown-2 8s ease-in-out infinite;
+}
+
+/* Bounce scroll indicator */
+@keyframes bounce-slow {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce-slow 2s ease-in-out infinite;
+}
+
+/* Hide scrollbars on horizontal carousels (still scrollable) */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}

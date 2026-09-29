@@ -24,6 +24,7 @@ export interface Skill {
   name: string;
   icon: string;
   category: SkillCategory;
+  color: string; // brand colour (hex)
 }
 
 export type SkillCategory =
@@ -35,7 +36,7 @@ export interface Project {
   title: string;
   description: string;
   longDescription?: string;
-  thumbnail: string;
+  thumbnail?: string;
   techStack: string[];
   category: ProjectCategory;
   githubUrl?: string;
@@ -57,6 +58,7 @@ export interface Experience {
   endDate: string | 'Present';
   type: ExperienceType;
   logo?: string;
+  photos?: string[]; // optional photos for the polaroid card
 }
 
 export type ExperienceType = 'professional' | 'organizational' | 'volunteer';

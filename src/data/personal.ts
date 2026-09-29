@@ -1,7 +1,7 @@
 import { PersonalInfo } from '../types';
 
 export const personalInfo: PersonalInfo = {
-  name: 'Zaza',
+  name: "Zahra' Zakiyyah Priyono",
   nickname: 'Zaza',
   fullName: "Zahra' Zakiyyah Priyono",
   tagline: 'I build ML systems that work outside the notebook.',

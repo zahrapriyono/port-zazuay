@@ -1,0 +1,27 @@
+import { SplashScreen } from '@/components/sections/splashScreen';
+import { Navbar } from '@/components/layout/navbar';
+import { About } from '@/components/sections/about';
+import { Skills } from '@/components/sections/skills';
+import { Projects } from '@/components/sections/projects';
+import { Experience } from '@/components/sections/experience';
+import { Education } from '@/components/sections/education';
+import { Contact } from '@/components/sections/contact';
+import { Footer } from '@/components/layout/footer';
+
+export default function Home() {
+  return (
+    <>
+      <SplashScreen />
+      <Navbar />
+      <main>
+        <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </>
+  );
+}
