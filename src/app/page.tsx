@@ -7,10 +7,13 @@ import { Experience } from '@/components/sections/experience';
 import { Education } from '@/components/sections/education';
 import { Contact } from '@/components/sections/contact';
 import { Footer } from '@/components/layout/footer';
+import { FloatingDots } from '@/components/ui/floatingDots';
 
 export default function Home() {
   return (
-    <>
+    // isolate + relative: lets FloatingDots sit behind everything on the page
+    <div className="relative isolate overflow-x-clip">
+      <FloatingDots />
       <SplashScreen />
       <Navbar />
       <main>
@@ -22,6 +25,6 @@ export default function Home() {
         <Contact />
       </main>
       <Footer />
-    </>
+    </div>
   );
 }

@@ -15,14 +15,6 @@ import {
   SPLASH_SCROLL_INDICATOR_DELAY_MS,
 } from '@/lib/constants';
 
-// Decorative dots: [top%, left%, size classes]
-const DOTS: Array<[string, string, string]> = [
-  ['5%', '15%', 'h-9 w-9 sm:h-14 sm:w-14'],
-  ['20%', '46%', 'h-8 w-8 sm:h-12 sm:w-12'],
-  ['88%', '19%', 'h-9 w-9 sm:h-14 sm:w-14'],
-  ['85%', '40%', 'h-8 w-8 sm:h-12 sm:w-12'],
-];
-
 export function SplashScreen() {
   const [showScrollIndicator, setShowScrollIndicator] = useState(false);
 
@@ -39,17 +31,7 @@ export function SplashScreen() {
   });
 
   return (
-    <section className="bg-background relative flex min-h-screen items-center overflow-hidden">
-      {/* Decorative dots */}
-      {DOTS.map(([top, left, size]) => (
-        <span
-          key={`${top}-${left}`}
-          aria-hidden
-          className={`absolute rounded-full ${size}`}
-          style={{ top, left, backgroundColor: 'var(--splash-dot)' }}
-        />
-      ))}
-
+    <section className="relative flex min-h-screen items-center overflow-hidden">
       {/* Folder icons */}
       <FolderIcon className="animate-windblown-1 absolute top-[14%] left-[30%] hidden w-20 sm:block sm:w-28" />
       <FolderIcon className="animate-windblown-2 absolute bottom-[14%] left-[4%] w-16 sm:w-24" />

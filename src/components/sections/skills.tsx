@@ -58,14 +58,6 @@ const PAGES: Array<{ label: string; categories: SkillCategory[] }> = [
   { label: 'ML, data & tools', categories: ['ml-ai', 'database', 'tool'] },
 ];
 
-const DOTS: Array<[string, string, string]> = [
-  ['-1%', '6%', 'h-10 w-10 sm:h-14 sm:w-14'],
-  ['12%', '90%', 'h-9 w-9 sm:h-12 sm:w-12'],
-  ['30%', '-1%', 'h-8 w-8 sm:h-12 sm:w-12'],
-  ['86%', '18%', 'h-9 w-9 sm:h-12 sm:w-12'],
-  ['96%', '84%', 'h-8 w-8 sm:h-12 sm:w-12'],
-];
-
 export function Skills() {
   const [page, setPage] = useState(0);
   const current = PAGES[page];
@@ -74,19 +66,7 @@ export function Skills() {
   );
 
   return (
-    <section
-      id="skills"
-      className="bg-surface relative overflow-hidden py-16 sm:py-24"
-    >
-      {DOTS.map(([top, left, size]) => (
-        <span
-          key={`${top}-${left}`}
-          aria-hidden
-          className={`bg-dot-soft absolute rounded-full ${size}`}
-          style={{ top, left }}
-        />
-      ))}
-
+    <section id="skills" className="relative py-16 sm:py-24">
       <AnimateOnScroll>
         <div className="relative mx-auto w-full max-w-4xl px-2 sm:px-6">
           <div className="relative aspect-1200/839 w-full">

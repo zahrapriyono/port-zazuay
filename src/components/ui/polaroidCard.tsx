@@ -19,12 +19,14 @@ interface PolaroidCardProps {
 export function PolaroidCard({ experience }: PolaroidCardProps) {
   const photos = experience.photos ?? [];
   const [photoIndex, setPhotoIndex] = useState(0);
-  const dateRange = `${formatDate(experience.startDate)} – ${formatDate(experience.endDate)}`;
+  const start = formatDate(experience.startDate);
+  const end = formatDate(experience.endDate);
+  const dateRange = start === end ? start : `${start} – ${end}`;
 
   return (
-    <article className="border-frame/30 bg-paper w-72 shrink-0 snap-center border-b border-l p-4 shadow-md sm:w-80">
+    <article className="bg-paper w-72 shrink-0 snap-center p-4 shadow-md sm:w-80">
       {/* Photo area (placeholder until photos are added) */}
-      <div className="border-frame/60 bg-dot-soft/40 relative aspect-square w-full overflow-hidden border">
+      <div className="bg-dot-soft/40 relative aspect-square w-full overflow-hidden">
         {photos.length > 0 ? (
           <Image
             src={photos[photoIndex]}
