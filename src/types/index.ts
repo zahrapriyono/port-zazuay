@@ -37,6 +37,7 @@ export interface Project {
   description: string;
   longDescription?: string;
   thumbnail?: string;
+  images?: string[];
   techStack: string[];
   category: ProjectCategory;
   githubUrl?: string;
@@ -58,7 +59,7 @@ export interface Experience {
   endDate: string | 'Present';
   type: ExperienceType;
   logo?: string;
-  photos?: string[]; // optional photos for the polaroid card
+  images?: string[]; // optional photos for the polaroid card
 }
 
 export type ExperienceType = 'professional' | 'organizational' | 'volunteer';

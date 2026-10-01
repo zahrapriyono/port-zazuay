@@ -1,4 +1,4 @@
-import { Education, Certification } from '../types';
+import { Education, Certification } from '@/types';
 
 export const education: Education[] = [
   {

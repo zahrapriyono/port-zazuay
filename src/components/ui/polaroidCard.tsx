@@ -17,7 +17,7 @@ interface PolaroidCardProps {
 }
 
 export function PolaroidCard({ experience }: PolaroidCardProps) {
-  const photos = experience.photos ?? [];
+  const photos = experience.images ?? [];
   const [photoIndex, setPhotoIndex] = useState(0);
   const start = formatDate(experience.startDate);
   const end = formatDate(experience.endDate);

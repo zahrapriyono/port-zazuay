@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { contactFormSchema } from '@/lib/validators';
 import { escapeHtml } from '@/lib/utils';
-// import { success } from "zod";
 
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 
@@ -57,7 +56,7 @@ export async function POST(request: NextRequest) {
       }),
     });
 
-    if (!response.ok) throw new Error('Failed too send message');
+    if (!response.ok) throw new Error('Failed to send message');
 
     return NextResponse.json({
       success: true,

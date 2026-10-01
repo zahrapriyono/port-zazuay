@@ -1,10 +1,11 @@
-import { Experience } from '../types';
+import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
   {
     id: 'himti-publication-marketing',
     title: 'Activist → Manager, Publication and Marketing',
     organization: 'HIMTI BINUS',
+    images: ['/images/experiences/manager-himti.JPG'],
     description:
       'Progressed from content-producing Activist to Manager of the Publication and Marketing division in Semarang, leading a 20-person team and cross-region (Jakarta/Semarang) publication strategy.',
     bullets: [
@@ -20,6 +21,10 @@ export const experiences: Experience[] = [
     id: 'sesvent-2025',
     title: 'Event Leader, Region Semarang',
     organization: 'HIMTI BINUS — SESVENT 2025',
+    images: [
+      '/images/experiences/sesvent-2025-1.JPG',
+      '/images/experiences/sesvent-2025-2.JPG',
+    ],
     description:
       "Led the event committee for HIMTI's activist-selection program in Semarang.",
     bullets: [
@@ -34,6 +39,13 @@ export const experiences: Experience[] = [
     id: 'first-year-program-freshmen',
     title: 'Freshmen Leader & Freshmen Partner',
     organization: 'First Year Program, BINUS University',
+    images: [
+      '/images/experiences/fyp-1.jpg',
+      '/images/experiences/fyp-2.jpg',
+      '/images/experiences/fyp-3.jpg',
+      '/images/experiences/fyp-4.jpg',
+      '/images/experiences/fyp-5.jpg',
+    ],
     description:
       'Mentored incoming Computer Science students — first as an orientation-focused Leader, then as an ongoing 1:1 Partner through their first year.',
     bullets: [
@@ -50,6 +62,10 @@ export const experiences: Experience[] = [
     title: 'Ceremony Coordinator Volunteer',
     organization:
       'Codeavour (International AI, Coding & Robotics Competition, Ages 7–18)',
+    images: [
+      '/images/experiences/codeavour-1.jpg',
+      '/images/experiences/codeavour-2.jpg',
+    ],
     description:
       'Served as volunteer PIC for opening and closing ceremonies at the Indonesia leg of Codeavour, an international AI/coding/robotics competition run across 60+ countries.',
     bullets: [
@@ -64,6 +80,10 @@ export const experiences: Experience[] = [
     id: 'feast-2025-secretary',
     title: 'Secretary',
     organization: 'FEAST 2025, HIMTI Semarang',
+    images: [
+      '/images/experiences/feast-2025-1.jpg',
+      '/images/experiences/feast-2025-2.jpg',
+    ],
     description:
       'Managed administrative operations for FEAST, a bonding and Ramadhan iftar event for HIMTI Semarang.',
     bullets: [
@@ -78,6 +98,10 @@ export const experiences: Experience[] = [
     id: 'pura-smart-technology-visit',
     title: 'Event Coordinator, Company Visit',
     organization: 'Pura Smart Technology (HIMTI Semarang)',
+    images: [
+      '/images/experiences/comvis-pura-1.JPG',
+      '/images/experiences/comvis-pura-2.JPG',
+    ],
     description:
       "Coordinated and led planning for an industrial visit to Pura Smart Technology, owning the event's rundown and logistics end-to-end.",
     bullets: [
@@ -93,6 +117,11 @@ export const experiences: Experience[] = [
     id: 'bifest-2025-character-building',
     title: 'Event Leader, Character Building Festival',
     organization: 'BIFEST 2025, BINUS Semarang',
+    images: [
+      '/images/experiences/bifest-cb-1.JPG',
+      '/images/experiences/bifest-cb-2.JPG',
+      '/images/experiences/bifest-cb-3.JPG',
+    ],
     description:
       'Directed a cross-faculty Character Building Festival, leading a 13-person team to coordinate activities for 90+ participants across three faculties.',
     bullets: [
@@ -107,6 +136,7 @@ export const experiences: Experience[] = [
     id: 'techfest-event-division',
     title: 'Event Division',
     organization: 'TECHFEST',
+    images: ['/images/experiences/techfest-1.png'],
     description:
       'Contributed to national-scale competition operations for TECHFEST, collaboratively building the event rundown for the competition final.',
     bullets: [
@@ -122,6 +152,12 @@ export const experiences: Experience[] = [
     id: 'techno-himti-semarang',
     title: 'Event Coordinator',
     organization: 'TECHNO HIMTI Semarang',
+    images: [
+      '/images/experiences/techno-2025-1.JPG',
+      '/images/experiences/techno-2025-2.JPG',
+      '/images/experiences/techno-2025-3.jpg',
+      '/images/experiences/techno-2025-4.jpg',
+    ],
     description:
       'Coordinated a welcoming event for 80+ incoming Computer Science students, informally extending coordination across all divisions beyond the formal Event Staff scope.',
     bullets: [
@@ -137,6 +173,10 @@ export const experiences: Experience[] = [
     id: 'hilet-2025-committee',
     title: 'Committee — Event ↔ Mentor Division Liaison',
     organization: 'HILET 2025, HIMTI',
+    images: [
+      '/images/experiences/hilet-1.png',
+      '/images/experiences/hilet-2.png',
+    ],
     description:
       'Served on the planning committee for HILET 2025 ("HIMTI Leadership Training 2025: Interstellar Leadership Mission"), coordinating between the Event Division and Mentor Division through the planning cycle.',
     bullets: [
@@ -151,6 +191,7 @@ export const experiences: Experience[] = [
     id: 'ldkcp-2026-event-staff',
     title: 'Event Staff (Structural Utilities)',
     organization: 'LDKCP 2026, HIMTI',
+    images: ['/images/experiences/ldkcp-1.jpg'],
     description:
       'Built structural event utilities for LDKCP 2026 ("Enter the Game, Lead the Journey"), HIMTI\'s leadership training program for incoming board members.',
     bullets: [

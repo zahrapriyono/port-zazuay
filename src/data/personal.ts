@@ -1,4 +1,4 @@
-import { PersonalInfo } from '../types';
+import { PersonalInfo } from '@/types';
 
 export const personalInfo: PersonalInfo = {
   name: "Zahra' Zakiyyah Priyono",
@@ -15,12 +15,12 @@ export const personalInfo: PersonalInfo = {
     {
       platform: 'GitHub',
       url: 'https://github.com/zahrapriyono',
-      icon: 'FaGitHub',
+      icon: 'FaGithub',
     },
     {
       platform: 'LinkedIn',
-      url: 'www.linkedin.com/in/zahrapriyono',
-      icon: 'FaLinkedIn',
+      url: 'https://www.linkedin.com/in/zahrapriyono',
+      icon: 'FaLinkedin',
     },
     {
       platform: 'Email',

@@ -17,17 +17,33 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <article className="border-primary/30 bg-card flex h-full flex-col rounded-2xl border p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-8">
-      {/* Optional screenshot: only rendered when a thumbnail is provided */}
+    <article className="group border-primary/30 bg-card flex h-full flex-col rounded-2xl border p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-8">
+      {/* Main thumbnail: only rendered when one is provided */}
       {project.thumbnail && (
-        <div className="bg-muted relative mb-5 aspect-video w-full overflow-hidden rounded-lg">
+        <div className="bg-muted relative mb-4 aspect-video w-full overflow-hidden rounded-lg">
           <Image
             src={project.thumbnail}
             alt={project.title}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
+        </div>
+      )}
+
+      {/* Extra screenshots: small scrollable row, only when provided */}
+      {project.images && project.images.length > 0 && (
+        <div className="mb-5 flex gap-2 overflow-x-auto">
+          {project.images.map((img, i) => (
+            <Image
+              key={img}
+              src={img}
+              alt={`${project.title} screenshot ${i + 1}`}
+              width={96}
+              height={64}
+              className="border-primary/30 h-16 w-24 shrink-0 rounded-md border object-cover transition-opacity hover:opacity-80"
+            />
+          ))}
         </div>
       )}
 
