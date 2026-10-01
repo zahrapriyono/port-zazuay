@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
-import { ChevronRight } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 import type { IconType } from 'react-icons';
 import { FaJava } from 'react-icons/fa';
 import {
@@ -29,7 +29,6 @@ import { skills } from '@/data/skills';
 import type { SkillCategory } from '@/types';
 import { AnimateOnScroll } from '@/components/ui/animateOnScroll';
 
-// Only the icons we use are imported, so the rest of react-icons is tree-shaken.
 const ICONS: Record<string, IconType> = {
   FaJava,
   SiPython,
@@ -51,7 +50,6 @@ const ICONS: Record<string, IconType> = {
   SiFigma,
 };
 
-// The plate is a 3-page carousel (matches the 3 dots in the design).
 const PAGES: Array<{ label: string; categories: SkillCategory[] }> = [
   { label: 'Languages', categories: ['language'] },
   { label: 'Frameworks', categories: ['framework'] },
@@ -60,6 +58,13 @@ const PAGES: Array<{ label: string; categories: SkillCategory[] }> = [
 
 export function Skills() {
   const [page, setPage] = useState(0);
+  const [direction, setDirection] = useState(1);
+
+  const goTo = (next: number) => {
+    setDirection(next > page ? 1 : -1);
+    setPage(next);
+  };
+
   const current = PAGES[page];
   const pageSkills = skills.filter((s) =>
     current.categories.includes(s.category),
@@ -78,7 +83,7 @@ export function Skills() {
               className="object-contain"
             />
 
-            {/* Label tag with pink handles */}
+            {/* Label tag */}
             <div className="absolute top-[24%] left-1/2 -translate-x-1/2">
               <div className="relative bg-[#540c0d]/70 px-4 py-1.5 sm:px-6 sm:py-2">
                 <span
@@ -103,14 +108,20 @@ export function Skills() {
               </div>
             </div>
 
-            {/* Icon grid for the current page */}
+            {/* Icon grid */}
             <div className="absolute inset-x-[25%] top-[38%] bottom-[24%]">
               <AnimatePresence mode="wait">
                 <motion.ul
                   key={page}
-                  initial={{ opacity: 0, y: 8 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -8 }}
+                  custom={direction}
+                  variants={{
+                    enter: (d: number) => ({ opacity: 0, x: d * 30 }),
+                    center: { opacity: 1, x: 0 },
+                    exit: (d: number) => ({ opacity: 0, x: d * -30 }),
+                  }}
+                  initial="enter"
+                  animate="center"
+                  exit="exit"
                   transition={{ duration: 0.25 }}
                   aria-label={current.label}
                   className="grid grid-cols-4 content-start gap-[6%]"
@@ -142,15 +153,35 @@ export function Skills() {
               </AnimatePresence>
             </div>
 
-            {/* Next page arrow */}
-            <button
-              type="button"
-              onClick={() => setPage((p) => (p + 1) % PAGES.length)}
-              aria-label="Next skills page"
-              className="absolute top-1/2 right-[15%] -translate-y-1/2 rounded-full p-1 text-white transition-transform hover:translate-x-1"
-            >
-              <ChevronRight className="h-6 w-6 sm:h-8 sm:w-8" strokeWidth={3} />
-            </button>
+            {/* Left arrow — only on page 1 or 2 */}
+            {page > 0 && (
+              <button
+                type="button"
+                onClick={() => goTo(page - 1)}
+                aria-label="Previous skills page"
+                className="absolute top-1/2 left-[15%] -translate-y-1/2 rounded-full p-1 text-white transition-transform hover:-translate-x-1"
+              >
+                <ChevronLeft
+                  className="h-6 w-6 sm:h-8 sm:w-8"
+                  strokeWidth={3}
+                />
+              </button>
+            )}
+
+            {/* Right arrow — only on page 0 or 1 */}
+            {page < PAGES.length - 1 && (
+              <button
+                type="button"
+                onClick={() => goTo(page + 1)}
+                aria-label="Next skills page"
+                className="absolute top-1/2 right-[15%] -translate-y-1/2 rounded-full p-1 text-white transition-transform hover:translate-x-1"
+              >
+                <ChevronRight
+                  className="h-6 w-6 sm:h-8 sm:w-8"
+                  strokeWidth={3}
+                />
+              </button>
+            )}
 
             {/* Page dots */}
             <div className="absolute bottom-[19%] left-1/2 flex -translate-x-1/2 gap-2">
@@ -158,7 +189,7 @@ export function Skills() {
                 <button
                   key={p.label}
                   type="button"
-                  onClick={() => setPage(i)}
+                  onClick={() => goTo(i)}
                   aria-label={`Show ${p.label}`}
                   aria-current={i === page}
                   className={`h-2.5 w-2.5 rounded-full transition-colors ${

@@ -1,5 +1,8 @@
+'use client';
+
+import { useState } from 'react';
 import Image from 'next/image';
-import { ExternalLink } from 'lucide-react';
+import { ExternalLink, ChevronRight } from 'lucide-react';
 import { FaGithub } from 'react-icons/fa';
 import { formatDate } from '@/lib/utils';
 import type { Project, ProjectCategory } from '@/types';
@@ -16,34 +19,50 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const images = project.images ?? [];
+  const [imgIndex, setImgIndex] = useState(0);
+
   return (
     <article className="group border-primary/30 bg-card flex h-full flex-col rounded-2xl border p-6 transition-transform duration-300 hover:-translate-y-1 sm:p-8">
-      {/* Main thumbnail: only rendered when one is provided */}
-      {project.thumbnail && (
-        <div className="bg-muted relative mb-4 aspect-video w-full overflow-hidden rounded-lg">
+      {/* Image carousel — same pattern as PolaroidCard */}
+      {images.length > 0 && (
+        <div className="bg-muted relative mb-5 aspect-video w-full overflow-hidden rounded-lg">
           <Image
-            src={project.thumbnail}
-            alt={project.title}
+            src={images[imgIndex]}
+            alt={`${project.title} screenshot ${imgIndex + 1}`}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
-        </div>
-      )}
 
-      {/* Extra screenshots: small scrollable row, only when provided */}
-      {project.images && project.images.length > 0 && (
-        <div className="mb-5 flex gap-2 overflow-x-auto">
-          {project.images.map((img, i) => (
-            <Image
-              key={img}
-              src={img}
-              alt={`${project.title} screenshot ${i + 1}`}
-              width={96}
-              height={64}
-              className="border-primary/30 h-16 w-24 shrink-0 rounded-md border object-cover transition-opacity hover:opacity-80"
-            />
-          ))}
+          {/* Next arrow — only shown when there are multiple images */}
+          {images.length > 1 && (
+            <button
+              type="button"
+              onClick={() => setImgIndex((i) => (i + 1) % images.length)}
+              aria-label="Next screenshot"
+              className="bg-card/80 text-foreground absolute top-1/2 right-2 -translate-y-1/2 rounded-full p-1 transition-opacity hover:opacity-80"
+            >
+              <ChevronRight size={18} strokeWidth={3} />
+            </button>
+          )}
+
+          {/* Dot indicators */}
+          {images.length > 1 && (
+            <div className="absolute bottom-2 left-1/2 flex -translate-x-1/2 gap-1.5">
+              {images.map((_, i) => (
+                <button
+                  key={i}
+                  type="button"
+                  onClick={() => setImgIndex(i)}
+                  aria-label={`Screenshot ${i + 1}`}
+                  className={`h-1.5 w-1.5 rounded-full transition-colors ${
+                    i === imgIndex ? 'bg-white' : 'bg-white/40'
+                  }`}
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
 

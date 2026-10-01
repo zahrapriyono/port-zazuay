@@ -173,10 +173,7 @@ export const experiences: Experience[] = [
     id: 'hilet-2025-committee',
     title: 'Committee — Event ↔ Mentor Division Liaison',
     organization: 'HILET 2025, HIMTI',
-    images: [
-      '/images/experiences/hilet-1.png',
-      '/images/experiences/hilet-2.png',
-    ],
+    images: ['/images/experiences/hilet-1.png'],
     description:
       'Served on the planning committee for HILET 2025 ("HIMTI Leadership Training 2025: Interstellar Leadership Mission"), coordinating between the Event Division and Mentor Division through the planning cycle.',
     bullets: [

@@ -99,7 +99,7 @@ export function SplashScreen() {
           />
           <div className="bg-muted relative aspect-4/5 w-full overflow-hidden">
             <Image
-              src="/images/splash-photo.webp"
+              src="/images/profile.jpg"
               alt={personalInfo.name}
               fill
               priority

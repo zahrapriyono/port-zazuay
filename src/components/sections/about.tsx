@@ -41,7 +41,7 @@ export function About() {
                   style={{ clipPath: 'url(#heart-clip)' }}
                 >
                   <Image
-                    src="/images/about-1.webp"
+                    src="/images/splash-photo-1.JPG"
                     alt={personalInfo.name}
                     fill
                     sizes="240px"
@@ -55,7 +55,7 @@ export function About() {
                   style={{ clipPath: 'url(#heart-clip)' }}
                 >
                   <Image
-                    src="/images/about-2.webp"
+                    src="/images/splash-photo-2.jpg"
                     alt=""
                     fill
                     sizes="260px"

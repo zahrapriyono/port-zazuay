@@ -13,6 +13,7 @@
     "test:coverage": "jest --coverage",
     "test:watch": "jest --watch",
     "audit:deps": "pnpm audit",
+    "audit:fix": "pnpm audit --fix",
     "analyze": "ANALYZE=true next build",
     "prepare": "husky"
   },

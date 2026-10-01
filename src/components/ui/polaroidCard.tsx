@@ -24,9 +24,9 @@ export function PolaroidCard({ experience }: PolaroidCardProps) {
   const dateRange = start === end ? start : `${start} – ${end}`;
 
   return (
-    <article className="bg-paper w-72 shrink-0 snap-center p-4 shadow-md sm:w-80">
+    <article className="bg-paper w-80 shrink-0 snap-center p-4 shadow-md sm:w-96">
       {/* Photo area (placeholder until photos are added) */}
-      <div className="bg-dot-soft/40 relative aspect-square w-full overflow-hidden">
+      <div className="bg-dot-soft/40 relative aspect-[1.91/1] w-full overflow-hidden">
         {photos.length > 0 ? (
           <Image
             src={photos[photoIndex]}
