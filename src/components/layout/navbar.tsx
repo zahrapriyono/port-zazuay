@@ -44,7 +44,7 @@ export function Navbar() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <a href="#" className="text-foreground text-lg font-bold">
-            zaza<span className="text-primary">.dev</span>
+            zaza
           </a>
 
           {/* Desktop links */}

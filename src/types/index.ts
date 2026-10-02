@@ -39,7 +39,7 @@ export interface Project {
   thumbnail?: string;
   images?: string[];
   techStack: string[];
-  category: ProjectCategory;
+  category: ProjectCategory[];
   githubUrl?: string;
   liveUrl?: string;
   featured: boolean;

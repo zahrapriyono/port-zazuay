@@ -1,9 +1,9 @@
 import { Experience } from '@/types';
 
 export const experiences: Experience[] = [
-  {
+{
     id: 'himti-publication-marketing',
-    title: 'Activist → Manager, Publication and Marketing',
+    title: 'Manager, Publication and Marketing',
     organization: 'HIMTI BINUS',
     images: ['/images/experiences/manager-himti.JPG'],
     description:
@@ -11,28 +11,9 @@ export const experiences: Experience[] = [
     bullets: [
       'Lead content and publication strategy for a team of 20 activists, reporting to the division General Manager',
       'Personally design promotional material and provide live-reporting coverage for Jakarta-based HIMTI events (incl. a company visit to Apple Developer Academy Tangerang, and the 2026 Digital Privacy webinar)',
-      "Manage HIMTI Semarang's official Instagram account, growing monthly views from 1.8K to 19K and non-follower reach to 92% of views (Feb–Aug 2026)",
     ],
     startDate: '2025-02',
     endDate: 'Present',
-    type: 'organizational',
-  },
-  {
-    id: 'sesvent-2025',
-    title: 'Event Leader, Region Semarang',
-    organization: 'HIMTI BINUS — SESVENT 2025',
-    images: [
-      '/images/experiences/sesvent-2025-1.JPG',
-      '/images/experiences/sesvent-2025-2.JPG',
-    ],
-    description:
-      "Led the event committee for HIMTI's activist-selection program in Semarang.",
-    bullets: [
-      'Supervised planning, scheduling, and assessment coordination for new members',
-      'Led a 20+ person committee coordinating assessments for 60+ prospective new members',
-    ],
-    startDate: '2025-09',
-    endDate: '2025-10',
     type: 'organizational',
   },
   {
@@ -47,7 +28,7 @@ export const experiences: Experience[] = [
       '/images/experiences/fyp-5.jpg',
     ],
     description:
-      'Mentored incoming Computer Science students — first as an orientation-focused Leader, then as an ongoing 1:1 Partner through their first year.',
+      'Mentored incoming Computer Science students as an orientation-focused Leader, then as an partner in a small group of freshmen through their first year.',
     bullets: [
       'Mentored and facilitated a class of 40+ freshmen as a Speaker for their orientation',
       'Facilitated 20 weekly developmental sessions on critical soft skills, including time management and study guides',
@@ -77,27 +58,78 @@ export const experiences: Experience[] = [
     type: 'volunteer',
   },
   {
-    id: 'feast-2025-secretary',
-    title: 'Secretary',
-    organization: 'FEAST 2025, HIMTI Semarang',
+    id: 'ldkcp-2026-event-staff',
+    title: 'Event Staff',
+    organization: 'LDKCP 2026, HIMTI BINUS',
+    images: ['/images/experiences/ldkcp-1.jpg'],
+    description:
+      'Built structural event utilities for LDKCP 2026 ("Enter the Game, Lead the Journey"), HIMTI\'s leadership training program for incoming board members.',
+    bullets: [
+      "Created structural event utilities used during the event's execution",
+      'Event ran hybrid, June 1–13, 2026, reaching 110 participants (102 onsite Greater Jakarta, 8 online Medan)',
+    ],
+    startDate: '2026-03',
+    endDate: '2026-04',
+    type: 'organizational',
+  },
+  {
+    id: 'hilet-2025-committee',
+    title: 'Event Staff',
+    organization: 'HILET 2025, HIMTI BINUS',
+    images: ['/images/experiences/hilet-1.png'],
+    description:
+      'Served on the planning committee for HILET 2025 ("HIMTI Leadership Training 2025: Interstellar Leadership Mission"), coordinating between the Event Division and Mentor Division through the planning cycle.',
+    bullets: [
+      'Coordinated between Event Division and Mentor Division during event planning',
+      'Event ran as a hybrid single-day program on Dec 14, 2025 (onsite Greater Jakarta; online Bandung/Semarang/Medan)',
+    ],
+    startDate: '2025-11',
+    endDate: '2025-12',
+    type: 'organizational',
+  },
+  {
+    id: 'sesvent-2025',
+    title: 'Event Leader, Region Semarang',
+    organization: 'SESVENT 2025, HIMTI BINUS',
     images: [
-      '/images/experiences/feast-2025-1.jpg',
-      '/images/experiences/feast-2025-2.jpg',
+      '/images/experiences/sesvent-2025-1.JPG',
+      '/images/experiences/sesvent-2025-2.JPG',
     ],
     description:
-      'Managed administrative operations for FEAST, a bonding and Ramadhan iftar event for HIMTI Semarang.',
+      "Led the event committee for HIMTI's activist-selection program in Semarang.",
     bullets: [
-      'Recorded meetings, organized schedules, and supported committee documentation',
-      'Part of a 14-person committee running an event for 40 participants',
+      'Supervised planning, scheduling, and assessment coordination for new members across divisions',
+      'Led a 20+ person committee coordinating assessments for 60+ prospective new members',
     ],
-    startDate: '2025-03',
-    endDate: '2025-03',
+    startDate: '2025-09',
+    endDate: '2025-10',
+    type: 'organizational',
+  },
+  {
+    id: 'techno-himti-semarang',
+    title: 'Event Staff',
+    organization: 'TECHNO 2025, HIMTI BINUS',
+    images: [
+      '/images/experiences/techno-2025-1.JPG',
+      '/images/experiences/techno-2025-2.JPG',
+      '/images/experiences/techno-2025-3.jpg',
+      '/images/experiences/techno-2025-4.jpg',
+    ],
+    description:
+      'Coordinated a welcoming event for 80+ incoming Computer Science students, help in extending coordination across all divisions.',
+    bullets: [
+      'Coordinated a welcoming party for new Computer Science students, managing event flow, logistics, and technical support',
+      'Coordinated across divisions.',
+      'Part of a 44-person general team (8 Semarang-specific) running the event for 80+ participants in Semarang',
+    ],
+    startDate: '2025-06',
+    endDate: '2025-09',
     type: 'organizational',
   },
   {
     id: 'pura-smart-technology-visit',
     title: 'Event Coordinator, Company Visit',
-    organization: 'Pura Smart Technology (HIMTI Semarang)',
+    organization: 'Company Visit to Pura Smart Technology, HIMTI BINUS Semarang',
     images: [
       '/images/experiences/comvis-pura-1.JPG',
       '/images/experiences/comvis-pura-2.JPG',
@@ -110,6 +142,22 @@ export const experiences: Experience[] = [
       'Part of a 4-person team running the visit for 30+ participants',
     ],
     startDate: '2025-05',
+    endDate: '2025-06',
+    type: 'organizational',
+  },
+  {
+    id: 'techfest-event-division',
+    title: 'Event Staff',
+    organization: 'TECHFEST',
+    images: ['/images/experiences/techfest-1.png'],
+    description:
+      'Contributed to national-scale competition operations for TECHFEST, collaboratively building the event rundown for the competition final.',
+    bullets: [
+      'Supported event operations for a competition featuring Data Analytics and UI/UX Design tracks',
+      'Collaboratively built the rundown for the competition final',
+      'Worked with technical and creative teams to maintain event quality',
+    ],
+    startDate: '2025-04',
     endDate: '2025-06',
     type: 'organizational',
   },
@@ -133,71 +181,21 @@ export const experiences: Experience[] = [
     type: 'organizational',
   },
   {
-    id: 'techfest-event-division',
-    title: 'Event Division',
-    organization: 'TECHFEST',
-    images: ['/images/experiences/techfest-1.png'],
-    description:
-      'Contributed to national-scale competition operations for TECHFEST, collaboratively building the event rundown for the competition final.',
-    bullets: [
-      'Supported event operations for a competition featuring Data Analytics and UI/UX Design tracks',
-      'Collaboratively built the rundown for the competition final',
-      'Worked with technical and creative teams to maintain event quality',
-    ],
-    startDate: '2025-04',
-    endDate: '2025-06',
-    type: 'organizational',
-  },
-  {
-    id: 'techno-himti-semarang',
-    title: 'Event Coordinator',
-    organization: 'TECHNO HIMTI Semarang',
+    id: 'feast-2025-secretary',
+    title: 'Secretary',
+    organization: 'FEAST 2025, HIMTI BINUS Semarang',
     images: [
-      '/images/experiences/techno-2025-1.JPG',
-      '/images/experiences/techno-2025-2.JPG',
-      '/images/experiences/techno-2025-3.jpg',
-      '/images/experiences/techno-2025-4.jpg',
+      '/images/experiences/feast-2025-1.jpg',
+      '/images/experiences/feast-2025-2.jpg',
     ],
     description:
-      'Coordinated a welcoming event for 80+ incoming Computer Science students, informally extending coordination across all divisions beyond the formal Event Staff scope.',
+      'Managed administrative operations for FEAST, a bonding and Ramadhan iftar event for HIMTI Semarang.',
     bullets: [
-      'Coordinated a welcoming party for new Computer Science students, managing event flow, logistics, and technical support',
-      'Coordinated across all divisions, beyond the formal Event Staff role',
-      'Part of a 44-person general team (8 Semarang-specific) running the event for 80+ participants',
+      'Recorded meetings, organized schedules, and supported committee documentation',
+      'Part of a 14-person committee running an event for 40 participants',
     ],
-    startDate: '2025-06',
-    endDate: '2025-09',
-    type: 'organizational',
-  },
-  {
-    id: 'hilet-2025-committee',
-    title: 'Committee — Event ↔ Mentor Division Liaison',
-    organization: 'HILET 2025, HIMTI',
-    images: ['/images/experiences/hilet-1.png'],
-    description:
-      'Served on the planning committee for HILET 2025 ("HIMTI Leadership Training 2025: Interstellar Leadership Mission"), coordinating between the Event Division and Mentor Division through the planning cycle.',
-    bullets: [
-      'Coordinated between Event Division and Mentor Division during event planning',
-      'Event ran as a hybrid single-day program on Dec 14, 2025 (onsite Greater Jakarta; online Bandung/Semarang/Medan)',
-    ],
-    startDate: '2025-11',
-    endDate: '2025-12',
-    type: 'organizational',
-  },
-  {
-    id: 'ldkcp-2026-event-staff',
-    title: 'Event Staff (Structural Utilities)',
-    organization: 'LDKCP 2026, HIMTI',
-    images: ['/images/experiences/ldkcp-1.jpg'],
-    description:
-      'Built structural event utilities for LDKCP 2026 ("Enter the Game, Lead the Journey"), HIMTI\'s leadership training program for incoming board members.',
-    bullets: [
-      "Created structural event utilities used during the event's execution",
-      'Event ran hybrid, June 1–13, 2026, reaching 110 participants (102 onsite Greater Jakarta, 8 online Medan)',
-      'Part of a 9-person team',
-    ],
-    startDate: '2026-03',
-    endDate: '2026-04',
+    startDate: '2025-03',
+    endDate: '2025-03',
     type: 'organizational',
   },
 

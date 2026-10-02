@@ -2,6 +2,21 @@ import { Project } from '@/types';
 
 export const projects: Project[] = [
   {
+    id: 'glucosense',
+    title: 'GlucoSense',
+    description:
+      'A diabetes education platform with a RAG-based AI chatbot (Groq API) handling mixed English/Indonesian input; owned the AI/chatbot build end-to-end (model integration, API work, data collection) and developed the frontend.',
+    images: [
+      '/images/projects/glucosense-1.jpg',
+      '/images/projects/glucosense-2.jpg',
+    ],
+    techStack: ['Django', 'REST API', 'Groq API (RAG)', 'Supabase'],
+    category: ['frontend', 'ml'],
+    githubUrl: 'https://github.com/zahrapriyono/GlucoSense.git',
+    featured: true,
+    date: '2026-08',
+  },
+  {
     id: 'bug-severity-classification',
     title: 'Bug Severity Classification',
     description:
@@ -11,8 +26,8 @@ export const projects: Project[] = [
       '/images/projects/bug-severity-classification-2.png',
     ],
     techStack: ['Python', 'TF-IDF', 'Scikit-learn', 'NLTK', 'Pandas'],
-    category: 'ml',
-    githubUrl: 'https://github.com/zahrapriyono/Bug-Severity-Classification',
+    category: ['ml'],
+    githubUrl: 'https://github.com/zazuay/Bug-Severity-Classification.git',
     featured: true,
     date: '2026-06',
   },
@@ -23,26 +38,11 @@ export const projects: Project[] = [
       'Led modeling, data processing, and the research paper comparing XLM-R, IndoBERT, and BiLSTM+FastText for emotion classification on Indonesian e-commerce reviews (PRDECT-ID dataset); IndoBERT performed best at 72.05% accuracy, 68.78% macro F1.',
     images: ['/images/projects/emotion-classification.png'],
     techStack: ['Python', 'XLM-R', 'IndoBERT', 'BiLSTM+FastText'],
-    category: 'ml',
+    category: ['ml'],
     githubUrl:
-      'https://github.com/zahrapriyono/Emotion-Classification-in-E-Commerce',
+      'https://github.com/zazuay/Emotion-Classification-in-E-Commerce.git',
     featured: true,
     date: '2026-06',
-  },
-  {
-    id: 'glucosense',
-    title: 'GlucoSense',
-    description:
-      'A diabetes education platform with a RAG-based AI chatbot (Groq API) handling mixed English/Indonesian input; owned the AI/chatbot build end-to-end (model integration, API work, data collection) and developed the frontend.',
-    images: [
-      '/images/projects/glucosense-1.jpg',
-      '/images/projects/glucosense-2.jpg',
-    ],
-    techStack: ['Django', 'REST API', 'Groq API (RAG)', 'Supabase'],
-    category: 'fullstack',
-    githubUrl: 'https://github.com/zahrapriyono/GlucoSense',
-    featured: true,
-    date: '2026-08',
   },
   {
     id: 'fruit-freshness-classification',
@@ -54,8 +54,8 @@ export const projects: Project[] = [
       '/images/projects/fruit-freshness-classification-2.jpeg',
     ],
     techStack: ['Python', 'TensorFlow/Keras', 'OpenCV', 'MLflow'],
-    category: 'ml',
-    githubUrl: 'https://github.com/zahrapriyono/Fruit-Freshness-Classification',
+    category: ['ml'],
+    githubUrl: 'https://github.com/vebynovalisa/fruit-freshness-classification.git',
     featured: true,
     date: '2026-06',
   },
@@ -76,9 +76,9 @@ export const projects: Project[] = [
       'FastAPI',
       'Groq LLM',
     ],
-    category: 'ml',
-    githubUrl: 'https://github.com/zahrapriyono/stress-predict-ml',
-    featured: false, // repo/metrics not independently verified (see note above)
+    category: ['ml'],
+    githubUrl: 'https://github.com/gracehdy/stress-predict-ml.git',
+    featured: false, 
     date: '2026-06',
   },
   {
@@ -88,8 +88,8 @@ export const projects: Project[] = [
       'Led a team of 5 developing a centralized scholarship platform (smart search/filtering, application tracking, admin CRUD); built the backend, authored UML diagrams (Use Case, Activity, Sequence, Class), and led black-box test case design and execution.',
     images: ['/images/projects/schola.png'],
     techStack: ['Django', 'MySQL'],
-    category: 'fullstack',
-    githubUrl: 'https://github.com/zahrapriyono/Schola-System',
+    category: ['backend'],
+    githubUrl: 'https://github.com/zazuay/Schola-System.git',
     featured: false,
     date: '2026-06',
   },

@@ -67,7 +67,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       )}
 
       <p className="text-muted-foreground mb-3 font-mono text-xs tracking-[0.2em] uppercase">
-        {CATEGORY_LABEL[project.category]} · {formatDate(project.date)}
+        {project.category.map((c) => CATEGORY_LABEL[c]).join(' · ')} · {formatDate(project.date)}
       </p>
 
       <h3 className="font-display text-primary mb-3 text-2xl font-semibold tracking-[-0.03em] sm:text-3xl">
