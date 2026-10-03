@@ -9,7 +9,7 @@ export const personalInfo: PersonalInfo = {
   roles: ['ML Engineer', 'Backend Developer', 'Frontend Developer'],
   email: 'zahrapriyono.works@gmail.com',
   location: 'Jakarta, Indonesia',
-  resumeUrl: '/resume.pdf',
+  resumeUrl: '/resume_zahra.pdf',
   profileImage: '/images/profile.jpg',
   socials: [
     {
