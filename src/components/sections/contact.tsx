@@ -20,7 +20,7 @@ const SOCIAL_LABELS: Record<string, string> = {
 }
 
 export function Contact() {
-   return (
+  return (
     <section id="contact" className="section-container text-foreground">
       <BracketHeading title="CONTACT ME" />
 
@@ -39,6 +39,17 @@ export function Contact() {
             <div className="flex flex-col gap-6">
 
               {/* "Let's connect!" — right side, like incoming message */}
+              <div className="flex justify-end">
+                <div className="relative">
+                  <div className="bg-highlight text-highlight-foreground rounded-3xl rounded-br-sm px-5 py-3 font-mono text-sm tracking-[0.12em] max-w-xs text-right">
+                    Got a project, an opportunity, or just want to say hi?
+                  </div>
+                  <span
+                    aria-hidden
+                    className="bg-highlight absolute -bottom-1 right-4 h-3 w-3 rotate-45"
+                  />
+                </div>
+              </div>
               <div className="flex justify-end">
                 <div className="relative">
                   <div className="bg-highlight text-highlight-foreground rounded-3xl rounded-br-sm px-5 py-3 font-mono text-sm tracking-[0.12em] uppercase">
