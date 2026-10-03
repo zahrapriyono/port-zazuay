@@ -132,7 +132,7 @@ export function Skills() {
                       <li
                         key={skill.name}
                         title={skill.name}
-                        className="flex aspect-square items-center justify-center rounded-lg bg-white shadow-md sm:rounded-xl"
+                        className="flex aspect-square flex-col items-center justify-center gap-1 rounded-lg bg-white shadow-md sm:rounded-xl"
                       >
                         {Icon ? (
                           <Icon
@@ -145,7 +145,9 @@ export function Skills() {
                             {skill.name.slice(0, 2)}
                           </span>
                         )}
-                        <span className="sr-only">{skill.name}</span>
+                        <span className="text-[8px] font-mono text-neutral-500 text-center leading-tight px-1">
+                          {skill.name}
+                        </span>
                       </li>
                     );
                   })}
