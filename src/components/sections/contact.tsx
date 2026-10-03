@@ -22,8 +22,6 @@ const SOCIAL_LABELS: Record<string, string> = {
 export function Contact() {
    return (
     <section id="contact" className="section-container text-foreground">
-
-      {/* Heading in bracket style like Experience */}
       <BracketHeading title="CONTACT ME" />
 
       <AnimateOnScroll>
@@ -38,24 +36,23 @@ export function Contact() {
           />
 
           <div className="border-glass-border bg-glass relative rounded-3xl border p-6 shadow-[0_8px_40px_rgba(84,12,13,0.15)] backdrop-blur-xl sm:p-10">
-            <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
+            <div className="flex flex-col gap-6">
 
-              {/* Left — "Let's connect!" bubble, like I'm texting */}
-              <div className="flex flex-col justify-center">
-                <div className="relative inline-block w-fit">
-                  <div className="bg-highlight text-highlight-foreground rounded-3xl rounded-bl-sm px-5 py-3 font-mono text-sm tracking-wide">
+              {/* "Let's connect!" — right side, like incoming message */}
+              <div className="flex justify-end">
+                <div className="relative">
+                  <div className="bg-highlight text-highlight-foreground rounded-3xl rounded-br-sm px-5 py-3 font-mono text-sm tracking-[0.12em] uppercase">
                     Let&apos;s connect!
                   </div>
-                  {/* Tail on bottom-left to look like outgoing message */}
                   <span
                     aria-hidden
-                    className="bg-highlight absolute -bottom-1 left-4 h-3 w-3 rotate-45"
+                    className="bg-highlight absolute -bottom-1 right-4 h-3 w-3 rotate-45"
                   />
                 </div>
               </div>
 
-              {/* Right — social bubbles */}
-              <div className="flex flex-col gap-4">
+              {/* Social links — left side, like your replies */}
+              <div className="flex flex-col gap-4 items-start">
                 {personalInfo.socials.map((social) => {
                   const Icon = SOCIAL_ICONS[social.icon];
                   const label = SOCIAL_LABELS[social.platform] ?? social.platform;
@@ -68,7 +65,7 @@ export function Contact() {
                       target={external ? '_blank' : undefined}
                       rel={external ? 'noopener noreferrer' : undefined}
                       aria-label={social.platform}
-                      className="bg-highlight text-highlight-foreground relative inline-flex w-fit items-center gap-3 rounded-3xl px-5 py-3 font-mono text-xs tracking-[0.12em] transition-opacity hover:opacity-80"
+                      className="bg-highlight text-highlight-foreground relative inline-flex items-center gap-3 rounded-3xl rounded-bl-sm px-5 py-3 font-mono text-xs tracking-[0.12em] uppercase transition-opacity hover:opacity-80"
                     >
                       {Icon && <Icon size={16} />}
                       {label}
