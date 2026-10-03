@@ -23,7 +23,7 @@ const SOCIAL_ICONS: Record<string, ComponentType<{ size?: number }>> = {
 const SOCIAL_LABELS: Record<string, string> = {
   GitHub: 'zahrapriyono',
   LinkedIn: 'zahrapriyono',
-  Email: 'zahrapriyono.works@gmail.com'
+  Email: personalInfo.email,
 }
 
 // const fieldClass =
