@@ -1,19 +1,12 @@
 'use client';
 
-// import { useState } from 'react';
-// import { useForm } from 'react-hook-form';
-// import { zodResolver } from '@hookform/resolvers/zod';
 import type { ComponentType } from 'react';
 import { Mail } from 'lucide-react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
-// import { contactFormSchema } from '@/lib/validators';
 import { personalInfo } from '@/data/personal';
 import { BracketHeading } from '@/components/ui/bracketHeading';
 import { AnimateOnScroll } from '@/components/ui/animateOnScroll';
-// import { cn } from '@/lib/utils';
-// import type { ContactFormData } from '@/types';
 
-// Only the icons we use (personal.ts refers to them by name).
 const SOCIAL_ICONS: Record<string, ComponentType<{ size?: number }>> = {
   FaGithub,
   FaLinkedin,
@@ -26,39 +19,7 @@ const SOCIAL_LABELS: Record<string, string> = {
   Email: personalInfo.email,
 }
 
-// const fieldClass =
-//   'w-full rounded-xl border border-primary/30 bg-white/40 px-4 py-3 text-sm text-foreground ' +
-//   'placeholder:text-muted-foreground outline-none transition-colors focus:border-primary dark:bg-white/5';
-
-// type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
-
 export function Contact() {
-  // const [status, setStatus] = useState<FormStatus>('idle');
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   reset,
-  //   formState: { errors },
-  // } = useForm<ContactFormData>({
-  //   resolver: zodResolver(contactFormSchema),
-  // });
-
-  // const onSubmit = async (data: ContactFormData) => {
-  //   setStatus('submitting');
-  //   try {
-  //     const res = await fetch('/api/contact', {
-  //       method: 'POST',
-  //       headers: { 'Content-Type': 'application/json' },
-  //       body: JSON.stringify(data),
-  //     });
-  //     if (!res.ok) throw new Error('Request failed');
-  //     setStatus('success');
-  //     reset();
-  //   } catch {
-  //     setStatus('error');
-  //   }
-  // };
-
    return (
     <section id="contact" className="section-container text-foreground">
 
