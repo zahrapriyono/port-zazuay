@@ -46,7 +46,7 @@ export function Contact() {
                   </div>
                   <span
                     aria-hidden
-                    className="bg-highlight absolute -bottom-1 right-4 h-3 w-3 rotate-45"
+                    className="bg-highlight absolute -bottom-1 right-4 h-3 w-5 rotate-45"
                   />
                 </div>
               </div>
